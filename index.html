@@ -2,18 +2,137 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Manthan</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+
+    <style type="text/css">
+
+      .hedderLable{
+        color: #544f7b;
+        font-size: 0.875rem;
+        border-color: transparent;
+        background-color: #ffffff;
+        text-transform: uppercase;
+        color: #4c7ef3;
+        font-weight: bold;
+        padding-left: 0;
+        align-self: flex-start;
+        margin-top: 2.8125rem;
+        margin-bottom: 0.22rem;
+        
+      }
+
+      .submitBtn{
+        margin-right: 0.75rem;
+        margin-bottom: 2.5rem;
+        width: 9.375rem;
+        height: 3rem;
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-align: center;
+        color: #3e3e40 !important;
+        background-color: #ffc107 !important;
+        border-color: transparent !important;
+        text-transform: uppercase;
+        border-radius: 4px;
+        margin-top: 0;
+        margin-left: initial;
+      }
+
+      .filterInput{
+        font-size: 0.875rem;
+        text-indent: 0.8rem;
+        color: #525252;
+        position: inherit;
+        width: 30%;
+        height: 2.5rem;
+        border-radius: 2px;
+        border: 1px solid #544f7b;
+        background: white;
+        padding: 0;
+        height: calc(2.5rem - 2px);
+      }
+
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
+   <!-- <h1>Manthan</h1> -->
+    <!-- All of the Node.js APIs are available in this renderer process. 
+    Environment <script>document.write(process.versions.node)</script>,
+    Author <script>document.write('Pavan Tuptewar')</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-
+    -->
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+            // You can also require other files to run in this process
+            require('./renderer.js')
+            require('./functions.js')
     </script>
-  </body>
+
+    <div class="audio">
+      <audio id="B" src="sounds/1.mp3" preload="auto"></audio>
+    </div>
+
+    <!-- <div >
+      <br>
+      <label name="operator_label" id="operator_id" value="operator_label" style="text-decoration-color: " class="hedderLable">Operator: </label> 
+        <script >document.write("Pavan Tuptewar")</script>
+      <br>
+      <label name="currentDate" id="currentDate" value="currentDate" class="hedderLable">Date:</label> 
+        <script >
+          document.write();
+      </script>
+      <br>
+      <label name="currentCount" id="currentCount" value="currentCount" class="hedderLable">Book Count:</label> 
+        <script >document.write('004456')</script>
+      <br>
+    </div> -->
+
+    <!-- <div>
+      <br>
+      <input type="text" name="studentName" id="studentName" class="filterInput" placeholder="Student Name" />
+      <input type="text" name="bookId" id="bookId" class="filterInput" placeholder="Book ID" />
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </div> 
+
+    <div>
+      <table>
+        <tbody>
+          <th>Student Name</th>
+          <th>Book ID / Name</th>
+          <th>Actions</th>
+        </tbody>
+      </table>
+    </div> -->
+
+
+    
+      <div class="form-horizontal mx-auto mt-5" style="width: 400px;">
+        <form>
+         <div class="form-group">
+            <label for="exampleInputEmail1">Email address/ Username</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+            <div class="mt">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Forgot</button>
+            </div>
+            
+        </form>
+      </div>
+      
+    
+</body>
+ 
 </html>
